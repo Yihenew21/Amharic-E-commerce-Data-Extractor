@@ -2,9 +2,9 @@
 
 ## 📌 Project Overview
 
-The **Amharic E-commerce Data Extractor** is a pipeline for transforming unstructured Telegram e-commerce posts (both text and images) into a structured format through **Named Entity Recognition (NER)**. It extracts key business entities — such as **Product**, **Price**, **Location**, **Brand**, **Size**, and **Contact** — and organizes them in a centralized format for **EthioMart**, an Amharic e-commerce hub.
+The **Amharic E-commerce Data Extractor** is an end-to-end pipeline for transforming unstructured Telegram e-commerce posts (text and images) into structured, business-ready data using **Named Entity Recognition (NER)**. It extracts key entities — **Product**, **Price**, **Location**, **Brand**, **Size**, and **Contact** — to power EthioMart, a centralized Amharic e-commerce hub.
 
-The project addresses the challenge of decentralized commerce on Telegram by scraping, processing, and labeling messages from various channels. It lays the groundwork for fine-tuning **Large Language Models (LLMs)** specifically for Amharic NER tasks.
+The project addresses the challenge of decentralized commerce on Telegram by scraping, processing, labeling, and analyzing messages from various channels. It includes fine-tuning and comparing transformer models for Amharic NER, model interpretability, and vendor analytics for micro-lending.
 
 ---
 
@@ -12,14 +12,11 @@ The project addresses the challenge of decentralized commerce on Telegram by scr
 
 ```bash
 ├── .github/
-│   └── workflows/                  # CI/CD pipelines (To be added)
+│   └── workflows/                  # CI/CD & model evaluation workflows
 ├── configs/
 │   └── scraping_config.yaml        # Telegram API config (IDs, target channels)
 ├── data/
-│   ├── raw/
-│   │   ├── telegram/
-│   │   │   └── [channel_name]/     # Per-channel scraped messages + images
-│   │   └── all_raw_telegram_messages.json
+│   ├── raw/                       # Raw scraped messages & images
 │   ├── processed/
 │   │   └── cleaned.parquet         # Preprocessed data (OCR + text)
 │   └── labeled/
@@ -30,173 +27,137 @@ The project addresses the challenge of decentralized commerce on Telegram by scr
 │       │   ├── val.conll
 │       │   └── test.conll
 │       └── README.md               # Labeling rules and entity definitions
-├── ml_pipeline/
-│   ├── training.py                 # Model training script (TBD)
-│   └── evaluation.py               # Model evaluation script (TBD)
+├── models/
+│   ├── *_finetuned/                # Fine-tuned model checkpoints (ignored by git)
+│   └── model_cards/                # Evaluation results, model cards
+├── reports/
+│   └── vendor_scorecard.csv        # Vendor analytics output
 ├── src/
-│   └── data_pipeline/
-│       ├── scraper.py              # Telegram scraper
-│       ├── preprocessor.py         # OCR & cleaning logic
-│       └── labeling_tool.py        # Sampling & CoNLL conversion
-├── .gitignore
+│   ├── analytics/
+│   │   └── vendor_scoring.py       # Vendor analytics & scorecard
+│   ├── data_pipeline/
+│   │   ├── scraper.py              # Telegram scraper
+│   │   ├── preprocessor.py         # OCR & cleaning logic
+│   │   └── labeling_tool.py        # Sampling & CoNLL conversion
+│   ├── ml_pipeline/
+│   │   ├── training.py             # Model training script
+│   │   ├── evaluation.py           # Model evaluation & comparison
+│   │   └── interpretability.py     # LIME-based model interpretability
+│   └── utils/
 ├── requirements.txt
-└── README.md                       # You're reading it
+└── README.md
 ```
 
 ---
 
 ## ✅ Task 1: Data Ingestion & Preprocessing
 
-### 🎯 Objective
+**Goal:** Scrape Telegram messages & images, perform OCR, and prepare unified text for NER.
 
-Build a robust ingestion system that:
+**How to Run:**
 
-- Scrapes Telegram messages & media (images),
-- Performs OCR on images,
-- Combines content for NER preprocessing.
-
-### ⚙️ Components
-
-#### 🔹 `scraper.py`
-
-- Connects to Telegram using `Telethon`.
-- Reads credentials and channels from `configs/scraping_config.yaml`.
-- Downloads message metadata + image attachments.
-- Outputs:
-  - Raw per-channel data: `data/raw/telegram/[channel_name]/`
-  - Unified JSON: `data/raw/all_raw_telegram_messages.json`
-
-#### 🔹 `preprocessor.py`
-
-- Loads raw messages.
-- Cleans Amharic text (spacing, newline issues).
-- Performs **OCR** on downloaded images using `Pytesseract` with `amh+eng` models.
-- Merges original + OCR text into `combined_content_for_ner`.
-- Outputs:
-  - Preprocessed Parquet file: `data/processed/cleaned.parquet`
-
-### 🚧 Challenges & Solutions
-
-- **Telegram Auth:** Handled `Telethon` session persistence.
-- **Image Management:** Stored local paths for images, handled naming conflicts.
-- **OCR Accuracy:** Configured Tesseract to support Amharic (`amh.traineddata`) alongside English.
-
-### ▶️ How to Run Task 1
-
-1. **Configure**
-
-   ```yaml
-   # configs/scraping_config.yaml
-   api_id: YOUR_API_ID
-   api_hash: YOUR_API_HASH
-   channels:
-     - ecommerce_channel_1
-     - ecommerce_channel_2
-   ```
-
-2. **Scrape Telegram Data**
-
+1. Configure `configs/scraping_config.yaml` with your Telegram API credentials and channel list.
+2. Scrape Telegram data:
    ```bash
    python src/data_pipeline/scraper.py
    ```
-
-3. **Run Preprocessing (OCR + Cleaning)**
+3. Run preprocessing (OCR + cleaning):
    ```bash
    python src/data_pipeline/preprocessor.py
    ```
+   - Output: `data/processed/cleaned.parquet`
 
 ---
 
 ## ✅ Task 2: Manual Labeling & CoNLL Conversion
 
-### 🎯 Objective
+**Goal:** Create a high-quality, human-annotated NER dataset in CoNLL format with BIO tagging.
 
-Create a high-quality, **human-annotated NER dataset** in **CoNLL** format with BIO tagging for fine-tuning a custom NER model.
+**How to Run:**
 
-### ⚙️ Components
-
-#### 🔹 `labeling_tool.py`
-
-- **Sampling Mode**
-
-  ```bash
-  python src/data_pipeline/labeling_tool.py --action sample --num_samples 300
-  ```
-
-  - Extracts 300 random entries from `cleaned.parquet`.
-  - Saves to: `data/labeled/raw_for_annotation/messages_for_manual_labeling.json`
-
-- **Annotation Format**
-
-  ```json
-  {
-    "message_id": 12345,
-    "combined_content_for_ner": "Sample Amharic message...",
-    "annotations": [
-      {
-        "entity": "PRICE",
-        "text": "1500 ብር",
-        "start": 10,
-        "end": 17
-      }
-    ]
-  }
-  ```
-
-- **Conversion Mode**
-  ```bash
-  python src/data_pipeline/labeling_tool.py --action convert --annotated_file data/labeled/raw_for_annotation/messages_for_manual_labeling.json
-  ```
-  - Converts annotated messages into token-level **BIO CoNLL format**.
-  - Splits into: `train.conll`, `val.conll`, `test.conll`
-
-#### 📘 `data/labeled/README.md`
-
-- **Entity Definitions:** Detailed labeling rules for each of the six target entities.
-- **Guidance:** Examples and best practices for consistency across annotators.
-- ⚠️ **This file must be created and updated manually.**
-
-### 🚧 Challenges & Solutions
-
-- Designed simple, intuitive JSON structure for annotators.
-- Wrote robust tokenizer-to-BIO converter to handle annotation alignment.
-- Solved minor bugs (e.g., multi-line print syntax, file path mismatches).
-
----
-
-### ▶️ How to Run Task 2
-
-1. **Sample Messages**
-
+1. Sample messages for annotation:
    ```bash
    python src/data_pipeline/labeling_tool.py --action sample --num_samples 300
    ```
-
-2. **Annotate Messages**
-
-   - Open: `data/labeled/raw_for_annotation/messages_for_manual_labeling.json`
-   - Add `annotations` for each message manually.
-
-3. **Convert to CoNLL Format**
-
+2. Annotate messages in `data/labeled/raw_for_annotation/messages_for_manual_labeling.json`.
+3. Convert to CoNLL format:
    ```bash
    python src/data_pipeline/labeling_tool.py --action convert --annotated_file data/labeled/raw_for_annotation/messages_for_manual_labeling.json
    ```
-
-4. **Write Labeling Guidelines**
-   - Add instructions to: `data/labeled/README.md`
+   - Output: `train.conll`, `val.conll`, `test.conll`
 
 ---
 
-## 🚀 Next Steps: Task 3 – Model Fine-Tuning
+## ✅ Task 3: Model Fine-Tuning
 
-With the pipeline and labeled data ready, the project is now set to move into **Task 3: Fine-tuning the NER model** using the prepared CoNLL data. This includes training scripts, hyperparameter tuning, and evaluation, to be implemented in the `ml_pipeline/` directory.
+**Goal:** Fine-tune transformer models (mBERT, DistilBERT, XLM-R) for Amharic NER using the labeled CoNLL data.
+
+**How to Run:**
+
+```bash
+python src/ml_pipeline/training.py
+```
+
+- Configure the model checkpoint in the script to switch between models.
+- Outputs are saved in `models/*_finetuned/` (ignored by git).
+
+---
+
+## ✅ Task 4: Model Evaluation & Comparison
+
+**Goal:** Evaluate and compare fine-tuned models on the test set using F1, precision, and recall. Select the best model for production.
+
+**How to Run:**
+
+```bash
+python src/ml_pipeline/evaluation.py
+```
+
+- Outputs a comparison table and saves results to `models/model_cards/evaluation_results.csv`.
+
+---
+
+## ✅ Task 5: Model Interpretability (LIME)
+
+**Goal:** Use LIME to explain which words most influence the model's prediction of entity presence in Amharic sentences.
+
+**How to Run:**
+
+```bash
+python src/ml_pipeline/interpretability.py
+```
+
+- Prints word importances for each sample sentence and entity type.
+- You can change the entity type in the script to analyze different entities.
+
+---
+
+## ✅ Task 6: Vendor Analytics & Scorecard
+
+**Goal:** Combine NER results and message metadata to compute business metrics for each vendor/channel (posting frequency, average views, average price, top post, lending score).
+
+**How to Run:**
+
+```bash
+python src/analytics/vendor_scoring.py
+```
+
+- Outputs a summary table and saves to `reports/vendor_scorecard.csv`.
+
+---
+
+## 🚀 Next Steps / Extending the Project
+
+- Improve NER accuracy with more labeled data.
+- Add more business metrics or visualizations.
+- Integrate with a live dashboard or database.
+- Expand interpretability to more entity types or use SHAP (with custom wrappers).
 
 ---
 
 ## 🧩 Dependencies
 
-Install project dependencies with:
+Install all dependencies with:
 
 ```bash
 pip install -r requirements.txt
