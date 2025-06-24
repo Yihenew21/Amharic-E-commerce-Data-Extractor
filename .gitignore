@@ -34,6 +34,7 @@ data/processed/
 # These are the directories you previously specified
 models/trained_models/
 models/artifacts/
+models/ner_model/
 
 # Hugging Face Model Training Output (common Trainer output paths)
 # Add these if your models/logs are saved in these specific directories
