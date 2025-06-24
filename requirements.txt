@@ -3,3 +3,9 @@ pandas
 pyyaml
 pytesseract
 Pillow
+scikit-learn
+transformers
+torch # Or tensorflow, depending on your preference. PyTorch is common for Hugging Face.
+datasets # For loading and managing datasets easily
+evaluate # For evaluating models
+accelerate # For distributed training and mixed precision
