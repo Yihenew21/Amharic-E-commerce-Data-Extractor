@@ -3,12 +3,20 @@ import pandas as pd
 from datasets import DatasetDict, Dataset, load_dataset
 from transformers import AutoTokenizer, AutoModelForTokenClassification, TrainingArguments, Trainer, DataCollatorForTokenClassification
 from seqeval.metrics import classification_report, f1_score, precision_score, recall_score
+import time # Added for timing measurements
 
 # --- Configuration ---
-MODEL_CHECKPOINT = "bert-base-multilingual-cased" # A good multilingual base model
+# CHANGE THIS FOR EACH MODEL YOU WANT TO FINE-TUNE AND COMPARE
+MODEL_CHECKPOINT = "bert-base-multilingual-cased" # Current: mBERT baseline
+# Next, change to: "xlm-roberta-base"
+# Next, change to: "distilbert-base-multilingual-cased"
+
 DATA_DIR = "data/labeled/v1"
-OUTPUT_DIR = "models/ner_model"
-LOGGING_DIR = "logs"
+# Dynamically set OUTPUT_DIR and LOGGING_DIR based on the model checkpoint name
+# This ensures each model's outputs go into a unique folder
+MODEL_SHORT_NAME = MODEL_CHECKPOINT.replace("/", "_") # e.g., "bert-base-multilingual-cased" -> "bert-base-multilingual-cased"
+OUTPUT_DIR = os.path.join("models", f"{MODEL_SHORT_NAME}_finetuned")
+LOGGING_DIR = os.path.join("logs", MODEL_SHORT_NAME)
 
 # Define your base entity types used in annotation
 BASE_ENTITY_TYPES = ["PRODUCT", "PRICE", "LOCATION", "BRAND", "SIZE", "CONTACT"]
@@ -25,6 +33,9 @@ id_to_label = {i: label for i, label in enumerate(LABEL_NAMES)}
 
 print(f"Defined Labels ({len(LABEL_NAMES)}): {LABEL_NAMES}")
 print(f"Label to ID Mapping: {label_to_id}")
+print(f"Current Model Checkpoint: {MODEL_CHECKPOINT}")
+print(f"Output Directory: {OUTPUT_DIR}")
+print(f"Logging Directory: {LOGGING_DIR}")
 
 def load_conll_data(data_dir):
     """Loads CoNLL files into a DatasetDict."""
@@ -241,7 +252,7 @@ def main():
         weight_decay=0.01,
         logging_dir=LOGGING_DIR,
         logging_strategy="epoch", # Log evaluation metrics at the end of each epoch
-        save_strategy="epoch",    # Save checkpoint at the end of each epoch
+        save_strategy="epoch",     # Save checkpoint at the end of each epoch
         load_best_model_at_end=True, # Load the best model (based on metric_for_best_model) at the end of training
         metric_for_best_model="f1", # The metric to monitor for best model selection
         report_to="none", # You can change this to "tensorboard" or "wandb" later for visualization
@@ -262,8 +273,11 @@ def main():
 
     # --- Start Training! ---
     print("\n--- Starting Model Training ---")
+    start_train_time = time.time() # Start timing training
     train_result = trainer.train()
-    print("\n--- Training Complete ---")
+    end_train_time = time.time() # End timing training
+    training_duration = end_train_time - start_train_time
+    print(f"\n--- Training Complete in {training_duration:.2f} seconds ---")
 
     # Save the fine-tuned model and tokenizer
     print(f"Saving fine-tuned model to {OUTPUT_DIR}")
@@ -272,8 +286,13 @@ def main():
 
     # Evaluate on the test set after training
     print("\n--- Evaluating on Test Set ---")
+    start_eval_time = time.time() # Start timing evaluation/inference
     test_results = trainer.evaluate(tokenized_datasets["test"])
+    end_eval_time = time.time() # End timing evaluation/inference
+    inference_duration = end_eval_time - start_eval_time
+    
     print(f"Test Set Evaluation Results: {test_results}")
+    print(f"Test Set Inference Duration: {inference_duration:.2f} seconds")
 
 
 if __name__ == "__main__":
