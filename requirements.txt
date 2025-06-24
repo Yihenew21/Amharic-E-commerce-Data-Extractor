@@ -9,3 +9,7 @@ torch # Or tensorflow, depending on your preference. PyTorch is common for Huggi
 datasets # For loading and managing datasets easily
 evaluate # For evaluating models
 accelerate # For distributed training and mixed precision
+transformers
+torch # or tensorflow, depending on your preference. PyTorch is commonly used with Hugging Face.
+datasets
+seqeval
