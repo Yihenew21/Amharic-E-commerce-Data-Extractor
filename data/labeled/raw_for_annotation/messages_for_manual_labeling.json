@@ -1,0 +1,1107 @@
+[
+  {
+    "message_id": 1,
+    "combined_content_for_ner": "ታላቅ ቅናሽ! Adidas ስፖርት ጫማዎች። ሳይዝ: 42. ዋጋ: 2500 ብር ብቻ! አድራሻ: ቦሌ, አዲስ አበባ። ስልክ: 0912345678.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "ስፖርት ጫማዎች", "start": 21, "end": 34 },
+      { "entity": "BRAND", "text": "Adidas", "start": 13, "end": 19 },
+      { "entity": "SIZE", "text": "42", "start": 42, "end": 44 },
+      { "entity": "PRICE", "text": "2500 ብር", "start": 51, "end": 59 },
+      { "entity": "LOCATION", "text": "ቦሌ, አዲስ አበባ", "start": 68, "end": 82 },
+      { "entity": "CONTACT", "text": "0912345678", "start": 89, "end": 99 }
+    ]
+  },
+  {
+    "message_id": 2,
+    "combined_content_for_ner": "Dell Inspiron ላፕቶፕ ለሽያጭ ቀርቧል። 15.6 ኢንች ስክሪን። ዋጋ: 45,000 ብር። ለመግዛት መገናኛ, 24 ህንፃ ይምጡ። ስልክ: 0923456789.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Dell Inspiron ላፕቶፕ",
+        "start": 0,
+        "end": 20
+      },
+      { "entity": "BRAND", "text": "Dell", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "15.6 ኢንች", "start": 35, "end": 45 },
+      { "entity": "PRICE", "text": "45,000 ብር", "start": 54, "end": 64 },
+      { "entity": "LOCATION", "text": "መገናኛ, 24 ህንፃ", "start": 74, "end": 89 },
+      { "entity": "CONTACT", "text": "0923456789", "start": 97, "end": 107 }
+    ]
+  },
+  {
+    "message_id": 3,
+    "combined_content_for_ner": "የሴቶች ቀሚስ ከ Zara ብራንድ። ሳይዝ: Medium. ዋጋ: 1200 ብር። አድራሻ: መገናኛ, ቦሌ ህንፃ። ለበለጠ መረጃ በ 0934567890 ይደውሉ።",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "የሴቶች ቀሚስ", "start": 0, "end": 11 },
+      { "entity": "BRAND", "text": "Zara", "start": 16, "end": 20 },
+      { "entity": "SIZE", "text": "Medium", "start": 28, "end": 34 },
+      { "entity": "PRICE", "text": "1200 ብር", "start": 41, "end": 49 },
+      { "entity": "LOCATION", "text": "መገናኛ, ቦሌ ህንፃ", "start": 58, "end": 74 },
+      { "entity": "CONTACT", "text": "0934567890", "start": 89, "end": 99 }
+    ]
+  },
+  {
+    "message_id": 4,
+    "combined_content_for_ner": "Samsung Galaxy S21 Ultra ስልክ። 256GB storage. ዋጋ: 60,000 ብር። አድራሻ: ሜክሲኮ, ኬኬር ህንፃ። ስልክ: 0945678901.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Samsung Galaxy S21 Ultra ስልክ",
+        "start": 0,
+        "end": 29
+      },
+      { "entity": "BRAND", "text": "Samsung", "start": 0, "end": 7 },
+      { "entity": "SIZE", "text": "256GB", "start": 32, "end": 37 },
+      { "entity": "PRICE", "text": "60,000 ብር", "start": 48, "end": 58 },
+      { "entity": "LOCATION", "text": "ሜክሲኮ, ኬኬር ህንፃ", "start": 67, "end": 84 },
+      { "entity": "CONTACT", "text": "0945678901", "start": 91, "end": 101 }
+    ]
+  },
+  {
+    "message_id": 5,
+    "combined_content_for_ner": "የወንዶች ሸሚዝ ከ Tommy Hilfiger ብራንድ። ሳይዝ: Large. ዋጋ: 1800 ብር። አድራሻ: ሳሪስ, አዲስ አበባ። ስልክ: 0956789012.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "የወንዶች ሸሚዝ", "start": 0, "end": 12 },
+      { "entity": "BRAND", "text": "Tommy Hilfiger", "start": 17, "end": 31 },
+      { "entity": "SIZE", "text": "Large", "start": 40, "end": 45 },
+      { "entity": "PRICE", "text": "1800 ብር", "start": 52, "end": 60 },
+      { "entity": "LOCATION", "text": "ሳሪስ, አዲስ አበባ", "start": 69, "end": 84 },
+      { "entity": "CONTACT", "text": "0956789012", "start": 91, "end": 101 }
+    ]
+  },
+  {
+    "message_id": 6,
+    "combined_content_for_ner": "LG 4K ስማርት ቲቪ። 55 ኢንች። ዋጋ: 35,000 ብር። አድራሻ: ፒያሳ, አዲስ አበባ። ለመግዛት በ 0967890123 ይደውሉ።",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "LG 4K ስማርት ቲቪ", "start": 0, "end": 16 },
+      { "entity": "BRAND", "text": "LG", "start": 0, "end": 2 },
+      { "entity": "SIZE", "text": "55 ኢንች", "start": 19, "end": 26 },
+      { "entity": "PRICE", "text": "35,000 ብር", "start": 33, "end": 43 },
+      { "entity": "LOCATION", "text": "ፒያሳ, አዲስ አበባ", "start": 52, "end": 68 },
+      { "entity": "CONTACT", "text": "0967890123", "start": 78, "end": 88 }
+    ]
+  },
+  {
+    "message_id": 7,
+    "combined_content_for_ner": "Sony PlayStation 5 ጌም ኮንሶል። 825GB SSD። ዋጋ: 50,000 ብር። አድራሻ: 22, ማዞሪያ። ለበለጠ መረጃ: 0978901234.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Sony PlayStation 5 ጌም ኮንሶል",
+        "start": 0,
+        "end": 29
+      },
+      { "entity": "BRAND", "text": "Sony", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "825GB SSD", "start": 32, "end": 41 },
+      { "entity": "PRICE", "text": "50,000 ብር", "start": 48, "end": 58 },
+      { "entity": "LOCATION", "text": "22, ማዞሪያ", "start": 67, "end": 77 },
+      { "entity": "CONTACT", "text": "0978901234", "start": 92, "end": 102 }
+    ]
+  },
+  {
+    "message_id": 8,
+    "combined_content_for_ner": "Gucci የእጅ ቦርሳ ለሴቶች። ሳይዝ: ትንሽ። ዋጋ: 8000 ብር። አድራሻ: ካዛንቺስ, አዲስ አበባ። ስልክ: 0989012345.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "Gucci የእጅ ቦርሳ", "start": 0, "end": 15 },
+      { "entity": "BRAND", "text": "Gucci", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "ትንሽ", "start": 25, "end": 29 },
+      { "entity": "PRICE", "text": "8000 ብር", "start": 36, "end": 44 },
+      {
+        "entity": "LOCATION",
+        "text": "ካዛንቺስ, አዲስ አበባ",
+        "start": 53,
+        "end": 71
+      },
+      { "entity": "CONTACT", "text": "0989012345", "start": 78, "end": 88 }
+    ]
+  },
+  {
+    "message_id": 9,
+    "combined_content_for_ner": "የህፃናት ልብስ ከ Carter's ብራንድ። ሳይዝ: 3-6 ወር። ዋጋ: 500 ብር። አድራሻ: ሀያ ሁለት, አዲስ አበባ። ስልክ: 0990123456.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "የህፃናት ልብስ", "start": 0, "end": 11 },
+      { "entity": "BRAND", "text": "Carter's", "start": 16, "end": 24 },
+      { "entity": "SIZE", "text": "3-6 ወር", "start": 33, "end": 39 },
+      { "entity": "PRICE", "text": "500 ብር", "start": 46, "end": 53 },
+      {
+        "entity": "LOCATION",
+        "text": "ሀያ ሁለት, አዲስ አበባ",
+        "start": 62,
+        "end": 80
+      },
+      { "entity": "CONTACT", "text": "0990123456", "start": 87, "end": 97 }
+    ]
+  },
+  {
+    "message_id": 10,
+    "combined_content_for_ner": "HP Spectre x360 ላፕቶፕ። 13.3 ኢንች 4K display. ዋጋ: 75,000 ብር። አድራሻ: CMC, አዲስ አበባ። ስልክ: 0911122334.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "HP Spectre x360 ላፕቶፕ",
+        "start": 0,
+        "end": 22
+      },
+      { "entity": "BRAND", "text": "HP", "start": 0, "end": 2 },
+      { "entity": "SIZE", "text": "13.3 ኢንች", "start": 25, "end": 34 },
+      { "entity": "PRICE", "text": "75,000 ብር", "start": 48, "end": 58 },
+      { "entity": "LOCATION", "text": "CMC, አዲስ አበባ", "start": 67, "end": 81 },
+      { "entity": "CONTACT", "text": "0911122334", "start": 88, "end": 98 }
+    ]
+  },
+  {
+    "message_id": 11,
+    "combined_content_for_ner": "Nike Air Max 270 ጫማ። ሳይዝ: 44. ዋጋ: 3200 ብር። አድራሻ: ገራዶ, አዲስ አበባ። ስልክ: 0922334455.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Nike Air Max 270 ጫማ",
+        "start": 0,
+        "end": 20
+      },
+      { "entity": "BRAND", "text": "Nike", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "44", "start": 28, "end": 30 },
+      { "entity": "PRICE", "text": "3200 ብር", "start": 37, "end": 45 },
+      { "entity": "LOCATION", "text": "ገራዶ, አዲስ አበባ", "start": 54, "end": 69 },
+      { "entity": "CONTACT", "text": "0922334455", "start": 76, "end": 86 }
+    ]
+  },
+  {
+    "message_id": 12,
+    "combined_content_for_ner": "Apple iPhone 13 Pro Max. 512GB. ዋጋ: 85,000 ብር። አድራሻ: ኤድናሞል, ቦሌ። ስልክ: 0933445566.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Apple iPhone 13 Pro Max",
+        "start": 0,
+        "end": 23
+      },
+      { "entity": "BRAND", "text": "Apple", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "512GB", "start": 25, "end": 30 },
+      { "entity": "PRICE", "text": "85,000 ብር", "start": 37, "end": 47 },
+      { "entity": "LOCATION", "text": "ኤድናሞል, ቦሌ", "start": 56, "end": 69 },
+      { "entity": "CONTACT", "text": "0933445566", "start": 76, "end": 86 }
+    ]
+  },
+  {
+    "message_id": 13,
+    "combined_content_for_ner": "የወንዶች ሱፍ ከ Hugo Boss ብራንድ። ሳይዝ: 52. ዋጋ: 7000 ብር። አድራሻ: ላፍቶ, አዲስ አበባ። ስልክ: 0944556677.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "የወንዶች ሱፍ", "start": 0, "end": 11 },
+      { "entity": "BRAND", "text": "Hugo Boss", "start": 16, "end": 25 },
+      { "entity": "SIZE", "text": "52", "start": 34, "end": 36 },
+      { "entity": "PRICE", "text": "7000 ብር", "start": 43, "end": 51 },
+      { "entity": "LOCATION", "text": "ላፍቶ, አዲስ አበባ", "start": 60, "end": 75 },
+      { "entity": "CONTACT", "text": "0944556677", "start": 82, "end": 92 }
+    ]
+  },
+  {
+    "message_id": 14,
+    "combined_content_for_ner": "Samsung 4-door ፍሪጅ። 28 cu. ft. ዋጋ: 120,000 ብር። አድራሻ: ጎተራ, አዲስ አበባ። ስልክ: 0955667788.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Samsung 4-door ፍሪጅ",
+        "start": 0,
+        "end": 20
+      },
+      { "entity": "BRAND", "text": "Samsung", "start": 0, "end": 7 },
+      { "entity": "SIZE", "text": "28 cu. ft.", "start": 23, "end": 32 },
+      { "entity": "PRICE", "text": "120,000 ብር", "start": 39, "end": 50 },
+      { "entity": "LOCATION", "text": "ጎተራ, አዲስ አበባ", "start": 59, "end": 74 },
+      { "entity": "CONTACT", "text": "0955667788", "start": 81, "end": 91 }
+    ]
+  },
+  {
+    "message_id": 15,
+    "combined_content_for_ner": "Canon EOS R5 ካሜራ። Full-frame. ዋጋ: 150,000 ብር። አድራሻ: ኦሎምፒያ, አዲስ አበባ። ስልክ: 0966778899.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Canon EOS R5 ካሜራ",
+        "start": 0,
+        "end": 18
+      },
+      { "entity": "BRAND", "text": "Canon", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "Full-frame", "start": 21, "end": 31 },
+      { "entity": "PRICE", "text": "150,000 ብር", "start": 38, "end": 49 },
+      {
+        "entity": "LOCATION",
+        "text": "ኦሎምፒያ, አዲስ አበባ",
+        "start": 58,
+        "end": 76
+      },
+      { "entity": "CONTACT", "text": "0966778899", "start": 83, "end": 93 }
+    ]
+  },
+  {
+    "message_id": 16,
+    "combined_content_for_ner": "የሴቶች ጂንስ ከ Levi's ብራንድ። ሳይዝ: 28. ዋጋ: 1500 ብር። አድራሻ: ሰሚት, አዲስ አበባ። ስልክ: 0977889900.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "የሴቶች ጂንስ", "start": 0, "end": 11 },
+      { "entity": "BRAND", "text": "Levi's", "start": 16, "end": 22 },
+      { "entity": "SIZE", "text": "28", "start": 31, "end": 33 },
+      { "entity": "PRICE", "text": "1500 ብር", "start": 40, "end": 48 },
+      { "entity": "LOCATION", "text": "ሰሚት, አዲስ አበባ", "start": 57, "end": 72 },
+      { "entity": "CONTACT", "text": "0977889900", "start": 79, "end": 89 }
+    ]
+  },
+  {
+    "message_id": 17,
+    "combined_content_for_ner": "Toyota Land Cruiser መኪና። V8 ሞተር። ዋጋ: 5,000,000 ብር። አድራሻ: ቦሌ, አትላስ። ስልክ: 0988990011.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Toyota Land Cruiser መኪና",
+        "start": 0,
+        "end": 24
+      },
+      { "entity": "BRAND", "text": "Toyota", "start": 0, "end": 6 },
+      { "entity": "SIZE", "text": "V8 ሞተር", "start": 27, "end": 34 },
+      { "entity": "PRICE", "text": "5,000,000 ብር", "start": 41, "end": 54 },
+      { "entity": "LOCATION", "text": "ቦሌ, አትላስ", "start": 63, "end": 74 },
+      { "entity": "CONTACT", "text": "0988990011", "start": 81, "end": 91 }
+    ]
+  },
+  {
+    "message_id": 18,
+    "combined_content_for_ner": "Rolex Submariner ሰዓት። 41mm case. ዋጋ: 300,000 ብር። አድራሻ: ሸራተን አዲስ, አዲስ አበባ። ስልክ: 0999001122.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Rolex Submariner ሰዓት",
+        "start": 0,
+        "end": 21
+      },
+      { "entity": "BRAND", "text": "Rolex", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "41mm case", "start": 24, "end": 33 },
+      { "entity": "PRICE", "text": "300,000 ብር", "start": 40, "end": 51 },
+      {
+        "entity": "LOCATION",
+        "text": "ሸራተን አዲስ, አዲስ አበባ",
+        "start": 60,
+        "end": 81
+      },
+      { "entity": "CONTACT", "text": "0999001122", "start": 88, "end": 98 }
+    ]
+  },
+  {
+    "message_id": 19,
+    "combined_content_for_ner": "Bose QuietComfort 45 የጆሮ ማዳመጫ። ዋጋ: 15,000 ብር። አድራሻ: መገናኛ, ዘፍመሽ ሞል። ስልክ: 0910203040.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Bose QuietComfort 45 የጆሮ ማዳመጫ",
+        "start": 0,
+        "end": 32
+      },
+      { "entity": "BRAND", "text": "Bose", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "N/A", "start": -1, "end": -1 },
+      { "entity": "PRICE", "text": "15,000 ብር", "start": 35, "end": 45 },
+      { "entity": "LOCATION", "text": "መገናኛ, ዘፍመሽ ሞል", "start": 54, "end": 71 },
+      { "entity": "CONTACT", "text": "0910203040", "start": 78, "end": 88 }
+    ]
+  },
+  {
+    "message_id": 20,
+    "combined_content_for_ner": "የልጆች ብስክሌት ከ Giant ብራንድ። 20-inch wheels. ዋጋ: 4000 ብር። አድራሻ: ሳር ቤት, አዲስ አበባ። ስልክ: 0920304050.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "የልጆች ብስክሌት", "start": 0, "end": 13 },
+      { "entity": "BRAND", "text": "Giant", "start": 18, "end": 23 },
+      { "entity": "SIZE", "text": "20-inch wheels", "start": 26, "end": 40 },
+      { "entity": "PRICE", "text": "4000 ብር", "start": 47, "end": 55 },
+      {
+        "entity": "LOCATION",
+        "text": "ሳር ቤት, አዲስ አበባ",
+        "start": 64,
+        "end": 80
+      },
+      { "entity": "CONTACT", "text": "0920304050", "start": 87, "end": 97 }
+    ]
+  },
+  {
+    "message_id": 21,
+    "combined_content_for_ner": "Puma ሹራብ ለወንዶች። ሳይዝ: XL. ዋጋ: 2200 ብር። አድራሻ: ገርጂ, አዲስ አበባ። ስልክ: 0930405060.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "Puma ሹራብ", "start": 0, "end": 9 },
+      { "entity": "BRAND", "text": "Puma", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "XL", "start": 22, "end": 24 },
+      { "entity": "PRICE", "text": "2200 ብር", "start": 31, "end": 39 },
+      { "entity": "LOCATION", "text": "ገርጂ, አዲስ አበባ", "start": 48, "end": 63 },
+      { "entity": "CONTACT", "text": "0930405060", "start": 70, "end": 80 }
+    ]
+  },
+  {
+    "message_id": 22,
+    "combined_content_for_ner": "MacBook Pro 16-inch ላፕቶፕ። M1 Max chip. ዋጋ: 180,000 ብር። አድራሻ: ቦሌ, ፍሬንድሺፕ ህንፃ። ስልክ: 0940506070.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "MacBook Pro 16-inch ላፕቶፕ",
+        "start": 0,
+        "end": 26
+      },
+      { "entity": "BRAND", "text": "Apple", "start": -1, "end": -1 },
+      { "entity": "SIZE", "text": "16-inch", "start": 12, "end": 19 },
+      { "entity": "PRICE", "text": "180,000 ብር", "start": 44, "end": 55 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, ፍሬንድሺፕ ህንፃ",
+        "start": 64,
+        "end": 83
+      },
+      { "entity": "CONTACT", "text": "0940506070", "start": 90, "end": 100 }
+    ]
+  },
+  {
+    "message_id": 23,
+    "combined_content_for_ner": "Ray-Ban የጸሀይ መነጽር። Wayfarer model. ዋጋ: 3500 ብር። አድራሻ: ፒያሳ, አራዳ ህንፃ። ስልክ: 0950607080.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Ray-Ban የጸሀይ መነጽር",
+        "start": 0,
+        "end": 20
+      },
+      { "entity": "BRAND", "text": "Ray-Ban", "start": 0, "end": 7 },
+      { "entity": "SIZE", "text": "Wayfarer model", "start": 23, "end": 37 },
+      { "entity": "PRICE", "text": "3500 ብር", "start": 44, "end": 52 },
+      { "entity": "LOCATION", "text": "ፒያሳ, አራዳ ህንፃ", "start": 61, "end": 77 },
+      { "entity": "CONTACT", "text": "0950607080", "start": 84, "end": 94 }
+    ]
+  },
+  {
+    "message_id": 24,
+    "combined_content_for_ner": "Adidas Stan Smith ጫማ። ሳይዝ: 39. ዋጋ: 2800 ብር። አድራሻ: መገናኛ, ሲኤምሲ መንገድ። ስልክ: 0960708090.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Adidas Stan Smith ጫማ",
+        "start": 0,
+        "end": 22
+      },
+      { "entity": "BRAND", "text": "Adidas", "start": 0, "end": 6 },
+      { "entity": "SIZE", "text": "39", "start": 30, "end": 32 },
+      { "entity": "PRICE", "text": "2800 ብር", "start": 39, "end": 47 },
+      {
+        "entity": "LOCATION",
+        "text": "መገናኛ, ሲኤምሲ መንገድ",
+        "start": 56,
+        "end": 76
+      },
+      { "entity": "CONTACT", "text": "0960708090", "start": 83, "end": 93 }
+    ]
+  },
+  {
+    "message_id": 25,
+    "combined_content_for_ner": "Sony Alpha 7 IV ካሜራ። 33MP sensor. ዋጋ: 160,000 ብር። አድራሻ: ቦሌ, ዲኤች ገዳ ህንፃ። ስልክ: 0970809010.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Sony Alpha 7 IV ካሜራ",
+        "start": 0,
+        "end": 21
+      },
+      { "entity": "BRAND", "text": "Sony", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "33MP sensor", "start": 24, "end": 35 },
+      { "entity": "PRICE", "text": "160,000 ብር", "start": 42, "end": 53 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, ዲኤች ገዳ ህንፃ",
+        "start": 62,
+        "end": 80
+      },
+      { "entity": "CONTACT", "text": "0970809010", "start": 87, "end": 97 }
+    ]
+  },
+  {
+    "message_id": 26,
+    "combined_content_for_ner": "Calvin Klein የውስጥ ልብስ። ሳይዝ: M. ዋጋ: 900 ብር። አድራሻ: ካዛንቺስ, ኡራኤል አካባቢ። ስልክ: 0980901020.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Calvin Klein የውስጥ ልብስ",
+        "start": 0,
+        "end": 24
+      },
+      { "entity": "BRAND", "text": "Calvin Klein", "start": 0, "end": 12 },
+      { "entity": "SIZE", "text": "M", "start": 33, "end": 34 },
+      { "entity": "PRICE", "text": "900 ብር", "start": 41, "end": 48 },
+      {
+        "entity": "LOCATION",
+        "text": "ካዛንቺስ, ኡራኤል አካባቢ",
+        "start": 57,
+        "end": 79
+      },
+      { "entity": "CONTACT", "text": "0980901020", "start": 86, "end": 96 }
+    ]
+  },
+  {
+    "message_id": 27,
+    "combined_content_for_ner": "Microsoft Surface Pro 8 ታብሌት። 13-inch screen. ዋጋ: 85,000 ብር። አድራሻ: 22, ሺላ ህንፃ። ስልክ: 0991012030.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Microsoft Surface Pro 8 ታብሌት",
+        "start": 0,
+        "end": 30
+      },
+      { "entity": "BRAND", "text": "Microsoft", "start": 0, "end": 9 },
+      { "entity": "SIZE", "text": "13-inch screen", "start": 33, "end": 47 },
+      { "entity": "PRICE", "text": "85,000 ብር", "start": 54, "end": 64 },
+      { "entity": "LOCATION", "text": "22, ሺላ ህንፃ", "start": 73, "end": 85 },
+      { "entity": "CONTACT", "text": "0991012030", "start": 92, "end": 102 }
+    ]
+  },
+  {
+    "message_id": 28,
+    "combined_content_for_ner": "The North Face ጃኬት። ሳይዝ: Large. ዋጋ: 4500 ብር። አድራሻ: ፒያሳ, ታይቱ ሆቴል አካባቢ። ስልክ: 0912131415.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "The North Face ጃኬት",
+        "start": 0,
+        "end": 19
+      },
+      { "entity": "BRAND", "text": "The North Face", "start": 0, "end": 14 },
+      { "entity": "SIZE", "text": "Large", "start": 28, "end": 33 },
+      { "entity": "PRICE", "text": "4500 ብር", "start": 40, "end": 48 },
+      {
+        "entity": "LOCATION",
+        "text": "ፒያሳ, ታይቱ ሆቴል አካባቢ",
+        "start": 57,
+        "end": 80
+      },
+      { "entity": "CONTACT", "text": "0912131415", "start": 87, "end": 97 }
+    ]
+  },
+  {
+    "message_id": 29,
+    "combined_content_for_ner": "GoPro HERO10 Black ካሜራ። 5.3K60 Video. ዋጋ: 25,000 ብር። አድራሻ: ቦሌ, ኦሮሚያ ህንፃ። ስልክ: 0923242526.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "GoPro HERO10 Black ካሜራ",
+        "start": 0,
+        "end": 24
+      },
+      { "entity": "BRAND", "text": "GoPro", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "5.3K60 Video", "start": 27, "end": 39 },
+      { "entity": "PRICE", "text": "25,000 ብር", "start": 46, "end": 56 },
+      { "entity": "LOCATION", "text": "ቦሌ, ኦሮሚያ ህንፃ", "start": 65, "end": 81 },
+      { "entity": "CONTACT", "text": "0923242526", "start": 88, "end": 98 }
+    ]
+  },
+  {
+    "message_id": 30,
+    "combined_content_for_ner": "Under Armour ስፖርት ቲሸርት። ሳይዝ: M. ዋጋ: 1300 ብር። አድራሻ: መገናኛ, ወሰን ህንፃ። ስልክ: 0934353637.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Under Armour ስፖርት ቲሸርት",
+        "start": 0,
+        "end": 26
+      },
+      { "entity": "BRAND", "text": "Under Armour", "start": 0, "end": 12 },
+      { "entity": "SIZE", "text": "M", "start": 35, "end": 36 },
+      { "entity": "PRICE", "text": "1300 ብር", "start": 43, "end": 51 },
+      { "entity": "LOCATION", "text": "መገናኛ, ወሰን ህንፃ", "start": 60, "end": 76 },
+      { "entity": "CONTACT", "text": "0934353637", "start": 83, "end": 93 }
+    ]
+  },
+  {
+    "message_id": 31,
+    "combined_content_for_ner": "Ford Ranger መኪና (2023)። 2.0L Bi-Turbo. ዋጋ: 3,500,000 ብር። አድራሻ: ሳሪስ, ቃሊቲ መንገድ። ስልክ: 0945464748.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Ford Ranger መኪና (2023)",
+        "start": 0,
+        "end": 24
+      },
+      { "entity": "BRAND", "text": "Ford", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "2.0L Bi-Turbo", "start": 27, "end": 41 },
+      { "entity": "PRICE", "text": "3,500,000 ብር", "start": 48, "end": 61 },
+      { "entity": "LOCATION", "text": "ሳሪስ, ቃሊቲ መንገድ", "start": 70, "end": 88 },
+      { "entity": "CONTACT", "text": "0945464748", "start": 95, "end": 105 }
+    ]
+  },
+  {
+    "message_id": 32,
+    "combined_content_for_ner": "Dyson V15 Detect ቫክዩም ክሊነር። ዋጋ: 30,000 ብር። አድራሻ: ካዛንቺስ, ራዲሰን ብሉ አካባቢ። ስልክ: 0956575859.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Dyson V15 Detect ቫክዩም ክሊነር",
+        "start": 0,
+        "end": 30
+      },
+      { "entity": "BRAND", "text": "Dyson", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "N/A", "start": -1, "end": -1 },
+      { "entity": "PRICE", "text": "30,000 ብር", "start": 33, "end": 43 },
+      {
+        "entity": "LOCATION",
+        "text": "ካዛንቺስ, ራዲሰን ብሉ አካባቢ",
+        "start": 52,
+        "end": 79
+      },
+      { "entity": "CONTACT", "text": "0956575859", "start": 86, "end": 96 }
+    ]
+  },
+  {
+    "message_id": 33,
+    "combined_content_for_ner": "New Balance 574 ጫማ። ሳይዝ: 41. ዋጋ: 2900 ብር። አድራሻ: ቦሌ, ጃፓን ኤምባሲ ጀርባ። ስልክ: 0967686970.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "New Balance 574 ጫማ",
+        "start": 0,
+        "end": 20
+      },
+      { "entity": "BRAND", "text": "New Balance", "start": 0, "end": 11 },
+      { "entity": "SIZE", "text": "41", "start": 28, "end": 30 },
+      { "entity": "PRICE", "text": "2900 ብር", "start": 37, "end": 45 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, ጃፓን ኤምባሲ ጀርባ",
+        "start": 54,
+        "end": 77
+      },
+      { "entity": "CONTACT", "text": "0967686970", "start": 84, "end": 94 }
+    ]
+  },
+  {
+    "message_id": 34,
+    "combined_content_for_ner": "Lenovo ThinkPad X1 Carbon ላፕቶፕ። 14-inch QHD. ዋጋ: 95,000 ብር። አድራሻ: መገናኛ, ጌት ህንፃ። ስልክ: 0978798081.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Lenovo ThinkPad X1 Carbon ላፕቶፕ",
+        "start": 0,
+        "end": 31
+      },
+      { "entity": "BRAND", "text": "Lenovo", "start": 0, "end": 6 },
+      { "entity": "SIZE", "text": "14-inch QHD", "start": 34, "end": 46 },
+      { "entity": "PRICE", "text": "95,000 ብር", "start": 53, "end": 63 },
+      { "entity": "LOCATION", "text": "መገናኛ, ጌት ህንፃ", "start": 72, "end": 88 },
+      { "entity": "CONTACT", "text": "0978798081", "start": 95, "end": 105 }
+    ]
+  },
+  {
+    "message_id": 35,
+    "combined_content_for_ner": "Michael Kors የእጅ ቦርሳ። Jet Set model. ዋጋ: 9500 ብር። አድራሻ: ቦሌ, ሚሊኒየም ሆል ፊትለፊት። ስልክ: 0989909192.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Michael Kors የእጅ ቦርሳ",
+        "start": 0,
+        "end": 22
+      },
+      { "entity": "BRAND", "text": "Michael Kors", "start": 0, "end": 12 },
+      { "entity": "SIZE", "text": "Jet Set model", "start": 25, "end": 38 },
+      { "entity": "PRICE", "text": "9500 ብር", "start": 45, "end": 53 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, ሚሊኒየም ሆል ፊትለፊት",
+        "start": 62,
+        "end": 89
+      },
+      { "entity": "CONTACT", "text": "0989909192", "start": 96, "end": 106 }
+    ]
+  },
+  {
+    "message_id": 36,
+    "combined_content_for_ner": "Asus ROG Zephyrus G14 ጌሚንግ ላፕቶፕ። 14-inch 120Hz. ዋጋ: 110,000 ብር። አድራሻ: 22, አትሌቲክስ ፌዴሬሽን ህንፃ። ስልክ: 0990123456.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Asus ROG Zephyrus G14 ጌሚንግ ላፕቶፕ",
+        "start": 0,
+        "end": 35
+      },
+      { "entity": "BRAND", "text": "Asus", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "14-inch 120Hz", "start": 38, "end": 52 },
+      { "entity": "PRICE", "text": "110,000 ብር", "start": 59, "end": 70 },
+      {
+        "entity": "LOCATION",
+        "text": "22, አትሌቲክስ ፌዴሬሽን ህንፃ",
+        "start": 79,
+        "end": 105
+      },
+      { "entity": "CONTACT", "text": "0990123456", "start": 112, "end": 122 }
+    ]
+  },
+  {
+    "message_id": 37,
+    "combined_content_for_ner": "Fila Disruptor 2 ጫማ። ሳይዝ: 38. ዋጋ: 2600 ብር። አድራሻ: መገናኛ, ህንፃ ቁጥር 34። ስልክ: 0912233445.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Fila Disruptor 2 ጫማ",
+        "start": 0,
+        "end": 21
+      },
+      { "entity": "BRAND", "text": "Fila", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "38", "start": 29, "end": 31 },
+      { "entity": "PRICE", "text": "2600 ብር", "start": 38, "end": 46 },
+      {
+        "entity": "LOCATION",
+        "text": "መገናኛ, ህንፃ ቁጥር 34",
+        "start": 55,
+        "end": 74
+      },
+      { "entity": "CONTACT", "text": "0912233445", "start": 81, "end": 91 }
+    ]
+  },
+  {
+    "message_id": 38,
+    "combined_content_for_ner": "DJI Mavic Air 2 ድሮን። 4K/60fps Video. ዋጋ: 65,000 ብር። አድራሻ: ቦሌ, ወሎ ሰፈር። ስልክ: 0923344556.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "DJI Mavic Air 2 ድሮን",
+        "start": 0,
+        "end": 20
+      },
+      { "entity": "BRAND", "text": "DJI", "start": 0, "end": 3 },
+      { "entity": "SIZE", "text": "4K/60fps Video", "start": 23, "end": 37 },
+      { "entity": "PRICE", "text": "65,000 ብር", "start": 44, "end": 54 },
+      { "entity": "LOCATION", "text": "ቦሌ, ወሎ ሰፈር", "start": 63, "end": 76 },
+      { "entity": "CONTACT", "text": "0923344556", "start": 83, "end": 93 }
+    ]
+  },
+  {
+    "message_id": 39,
+    "combined_content_for_ner": "Converse Chuck Taylor All Star ጫማ። ሳይዝ: 40. ዋጋ: 1900 ብር። አድራሻ: ፒያሳ, ቸርችል ጎዳና። ስልክ: 0934455667.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Converse Chuck Taylor All Star ጫማ",
+        "start": 0,
+        "end": 33
+      },
+      { "entity": "BRAND", "text": "Converse", "start": 0, "end": 8 },
+      { "entity": "SIZE", "text": "40", "start": 41, "end": 43 },
+      { "entity": "PRICE", "text": "1900 ብር", "start": 50, "end": 58 },
+      { "entity": "LOCATION", "text": "ፒያሳ, ቸርችል ጎዳና", "start": 67, "end": 85 },
+      { "entity": "CONTACT", "text": "0934455667", "start": 92, "end": 102 }
+    ]
+  },
+  {
+    "message_id": 40,
+    "combined_content_for_ner": "Google Pixel 6 Pro ስልክ። 128GB. ዋጋ: 55,000 ብር። አድራሻ: ሜክሲኮ, ኦሎምፒያ መንገድ። ስልክ: 0945566778.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Google Pixel 6 Pro ስልክ",
+        "start": 0,
+        "end": 23
+      },
+      { "entity": "BRAND", "text": "Google", "start": 0, "end": 6 },
+      { "entity": "SIZE", "text": "128GB", "start": 26, "end": 31 },
+      { "entity": "PRICE", "text": "55,000 ብር", "start": 38, "end": 48 },
+      {
+        "entity": "LOCATION",
+        "text": "ሜክሲኮ, ኦሎምፒያ መንገድ",
+        "start": 57,
+        "end": 79
+      },
+      { "entity": "CONTACT", "text": "0945566778", "start": 86, "end": 96 }
+    ]
+  },
+  {
+    "message_id": 41,
+    "combined_content_for_ner": "Razer Blade 15 ጌሚንግ ላፕቶፕ። 15.6-inch 360Hz. ዋጋ: 150,000 ብር። አድራሻ: 22, ማዞሪያ ህንፃ። ስልክ: 0956677889.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Razer Blade 15 ጌሚንግ ላፕቶፕ",
+        "start": 0,
+        "end": 28
+      },
+      { "entity": "BRAND", "text": "Razer", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "15.6-inch 360Hz", "start": 31, "end": 47 },
+      { "entity": "PRICE", "text": "150,000 ብር", "start": 54, "end": 65 },
+      { "entity": "LOCATION", "text": "22, ማዞሪያ ህንፃ", "start": 74, "end": 89 },
+      { "entity": "CONTACT", "text": "0956677889", "start": 96, "end": 106 }
+    ]
+  },
+  {
+    "message_id": 42,
+    "combined_content_for_ner": "Vans Old Skool ጫማ። ሳይዝ: 43. ዋጋ: 2400 ብር። አድራሻ: ቦሌ, አትላስ ሆቴል አጠገብ። ስልክ: 0967788990.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Vans Old Skool ጫማ",
+        "start": 0,
+        "end": 18
+      },
+      { "entity": "BRAND", "text": "Vans", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "43", "start": 26, "end": 28 },
+      { "entity": "PRICE", "text": "2400 ብር", "start": 35, "end": 43 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, አትላስ ሆቴል አጠገብ",
+        "start": 52,
+        "end": 75
+      },
+      { "entity": "CONTACT", "text": "0967788990", "start": 82, "end": 92 }
+    ]
+  },
+  {
+    "message_id": 43,
+    "combined_content_for_ner": "TAG Heuer Carrera ሰዓት። 44mm case. ዋጋ: 250,000 ብር። አድራሻ: ሸራተን አዲስ, ላግዠሪ ሞል። ስልክ: 0978899001.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "TAG Heuer Carrera ሰዓት",
+        "start": 0,
+        "end": 21
+      },
+      { "entity": "BRAND", "text": "TAG Heuer", "start": 0, "end": 9 },
+      { "entity": "SIZE", "text": "44mm case", "start": 24, "end": 33 },
+      { "entity": "PRICE", "text": "250,000 ብር", "start": 40, "end": 51 },
+      {
+        "entity": "LOCATION",
+        "text": "ሸራተን አዲስ, ላግዠሪ ሞል",
+        "start": 60,
+        "end": 82
+      },
+      { "entity": "CONTACT", "text": "0978899001", "start": 89, "end": 99 }
+    ]
+  },
+  {
+    "message_id": 44,
+    "combined_content_for_ner": "Acer Predator Helios 300 ላፕቶፕ። 17.3-inch. ዋጋ: 120,000 ብር። አድራሻ: መገናኛ, ሊቪንግስቶን ህንፃ። ስልክ: 0989900112.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Acer Predator Helios 300 ላፕቶፕ",
+        "start": 0,
+        "end": 30
+      },
+      { "entity": "BRAND", "text": "Acer", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "17.3-inch", "start": 33, "end": 42 },
+      { "entity": "PRICE", "text": "120,000 ብር", "start": 49, "end": 60 },
+      {
+        "entity": "LOCATION",
+        "text": "መገናኛ, ሊቪንግስቶን ህንፃ",
+        "start": 69,
+        "end": 92
+      },
+      { "entity": "CONTACT", "text": "0989900112", "start": 99, "end": 109 }
+    ]
+  },
+  {
+    "message_id": 45,
+    "combined_content_for_ner": "Dr. Martens 1460 ቦቲ ጫማ። ሳይዝ: 42. ዋጋ: 4800 ብር። አድራሻ: ፒያሳ, ሲቲ ሴንተር። ስልክ: 0990011223.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Dr. Martens 1460 ቦቲ ጫማ",
+        "start": 0,
+        "end": 25
+      },
+      { "entity": "BRAND", "text": "Dr. Martens", "start": 0, "end": 11 },
+      { "entity": "SIZE", "text": "42", "start": 34, "end": 36 },
+      { "entity": "PRICE", "text": "4800 ብር", "start": 43, "end": 51 },
+      { "entity": "LOCATION", "text": "ፒያሳ, ሲቲ ሴንተር", "start": 60, "end": 76 },
+      { "entity": "CONTACT", "text": "0990011223", "start": 83, "end": 93 }
+    ]
+  },
+  {
+    "message_id": 46,
+    "combined_content_for_ner": "IKEA MALM አልጋ። Queen size. ዋጋ: 25,000 ብር። አድራሻ: ቦሌ, ፍሬንድሺፕ ሲቲ ሴንተር። ስልክ: 0911223344.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "IKEA MALM አልጋ", "start": 0, "end": 14 },
+      { "entity": "BRAND", "text": "IKEA", "start": 0, "end": 4 },
+      { "entity": "SIZE", "text": "Queen size", "start": 17, "end": 27 },
+      { "entity": "PRICE", "text": "25,000 ብር", "start": 34, "end": 44 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, ፍሬንድሺፕ ሲቲ ሴንተር",
+        "start": 53,
+        "end": 78
+      },
+      { "entity": "CONTACT", "text": "0911223344", "start": 85, "end": 95 }
+    ]
+  },
+  {
+    "message_id": 47,
+    "combined_content_for_ner": "Timberland ቦቲ ጫማ። ሳይዝ: 45. ዋጋ: 5500 ብር። አድራሻ: ሳሪስ, ኖክ ማደያ ፊትለፊት። ስልክ: 0922334455.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Timberland ቦቲ ጫማ",
+        "start": 0,
+        "end": 19
+      },
+      { "entity": "BRAND", "text": "Timberland", "start": 0, "end": 10 },
+      { "entity": "SIZE", "text": "45", "start": 28, "end": 30 },
+      { "entity": "PRICE", "text": "5500 ብር", "start": 37, "end": 45 },
+      {
+        "entity": "LOCATION",
+        "text": "ሳሪስ, ኖክ ማደያ ፊትለፊት",
+        "start": 54,
+        "end": 78
+      },
+      { "entity": "CONTACT", "text": "0922334455", "start": 85, "end": 95 }
+    ]
+  },
+  {
+    "message_id": 48,
+    "combined_content_for_ner": "Burberry ሽቶ ለሴቶች። 100ml. ዋጋ: 6000 ብር። አድራሻ: ካዛንቺስ, ኤሊሊ ሆቴል አጠገብ። ስልክ: 0933445566.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "Burberry ሽቶ", "start": 0, "end": 12 },
+      { "entity": "BRAND", "text": "Burberry", "start": 0, "end": 8 },
+      { "entity": "SIZE", "text": "100ml", "start": 22, "end": 27 },
+      { "entity": "PRICE", "text": "6000 ብር", "start": 34, "end": 42 },
+      {
+        "entity": "LOCATION",
+        "text": "ካዛንቺስ, ኤሊሊ ሆቴል አጠገብ",
+        "start": 51,
+        "end": 78
+      },
+      { "entity": "CONTACT", "text": "0933445566", "start": 85, "end": 95 }
+    ]
+  },
+  {
+    "message_id": 49,
+    "combined_content_for_ner": "Nikon Z6 II ካሜራ። 24.5MP. ዋጋ: 140,000 ብር። አድራሻ: ፒያሳ, ፎቶ ስታር ህንፃ። ስልክ: 0944556677.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "Nikon Z6 II ካሜራ", "start": 0, "end": 17 },
+      { "entity": "BRAND", "text": "Nikon", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "24.5MP", "start": 20, "end": 26 },
+      { "entity": "PRICE", "text": "140,000 ብር", "start": 33, "end": 44 },
+      {
+        "entity": "LOCATION",
+        "text": "ፒያሳ, ፎቶ ስታር ህንፃ",
+        "start": 53,
+        "end": 72
+      },
+      { "entity": "CONTACT", "text": "0944556677", "start": 79, "end": 89 }
+    ]
+  },
+  {
+    "message_id": 50,
+    "combined_content_for_ner": "Giorgio Armani ሱፍ። ሳይዝ: 50. ዋጋ: 12,000 ብር። አድራሻ: ካዛንቺስ, ኡራኤል አካባቢ። ስልክ: 0955667788.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Giorgio Armani ሱፍ",
+        "start": 0,
+        "end": 18
+      },
+      { "entity": "BRAND", "text": "Giorgio Armani", "start": 0, "end": 14 },
+      { "entity": "SIZE", "text": "50", "start": 24, "end": 26 },
+      { "entity": "PRICE", "text": "12,000 ብር", "start": 33, "end": 43 },
+      {
+        "entity": "LOCATION",
+        "text": "ካዛንቺስ, ኡራኤል አካባቢ",
+        "start": 52,
+        "end": 74
+      },
+      { "entity": "CONTACT", "text": "0955667788", "start": 81, "end": 91 }
+    ]
+  },
+  {
+    "message_id": 51,
+    "combined_content_for_ner": "Prada የጸሀይ መነጽር። Oversized. ዋጋ: 4500 ብር። አድራሻ: 22, ሰላም ሲቲ ሞል። ስልክ: 0966778899.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "Prada የጸሀይ መነጽር", "start": 0, "end": 18 },
+      { "entity": "BRAND", "text": "Prada", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "Oversized", "start": 21, "end": 30 },
+      { "entity": "PRICE", "text": "4500 ብር", "start": 37, "end": 45 },
+      { "entity": "LOCATION", "text": "22, ሰላም ሲቲ ሞል", "start": 54, "end": 70 },
+      { "entity": "CONTACT", "text": "0966778899", "start": 77, "end": 87 }
+    ]
+  },
+  {
+    "message_id": 52,
+    "combined_content_for_ner": "Dell Alienware m15 R6 ጌሚንግ ላፕቶፕ። 15.6-inch QHD 240Hz. ዋጋ: 160,000 ብር። አድራሻ: መገናኛ, Edna Mall። ስልክ: 0977889900.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Dell Alienware m15 R6 ጌሚንግ ላፕቶፕ",
+        "start": 0,
+        "end": 34
+      },
+      { "entity": "BRAND", "text": "Dell Alienware", "start": 0, "end": 14 },
+      {
+        "entity": "SIZE",
+        "text": "15.6-inch QHD 240Hz",
+        "start": 37,
+        "end": 58
+      },
+      { "entity": "PRICE", "text": "160,000 ብር", "start": 65, "end": 76 },
+      {
+        "entity": "LOCATION",
+        "text": "መገናኛ, Edna Mall",
+        "start": 85,
+        "end": 101
+      },
+      { "entity": "CONTACT", "text": "0977889900", "start": 108, "end": 118 }
+    ]
+  },
+  {
+    "message_id": 53,
+    "combined_content_for_ner": "Canada Goose ጃኬት። ሳይዝ: XL. ዋጋ: 8000 ብር። አድራሻ: ቦሌ, ዓለም ሲኒማ ጀርባ። ስልክ: 0988990011.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Canada Goose ጃኬት",
+        "start": 0,
+        "end": 18
+      },
+      { "entity": "BRAND", "text": "Canada Goose", "start": 0, "end": 12 },
+      { "entity": "SIZE", "text": "XL", "start": 27, "end": 29 },
+      { "entity": "PRICE", "text": "8000 ብር", "start": 36, "end": 44 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, ዓለም ሲኒማ ጀርባ",
+        "start": 53,
+        "end": 74
+      },
+      { "entity": "CONTACT", "text": "0988990011", "start": 81, "end": 91 }
+    ]
+  },
+  {
+    "message_id": 54,
+    "combined_content_for_ner": "Citizen Eco-Drive ሰዓት። 42mm. ዋጋ: 12,000 ብር። አድራሻ: ፒያሳ, ቴዎድሮስ አደባባይ። ስልክ: 0999001122.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Citizen Eco-Drive ሰዓት",
+        "start": 0,
+        "end": 22
+      },
+      { "entity": "BRAND", "text": "Citizen", "start": 0, "end": 7 },
+      { "entity": "SIZE", "text": "42mm", "start": 25, "end": 29 },
+      { "entity": "PRICE", "text": "12,000 ብር", "start": 36, "end": 46 },
+      {
+        "entity": "LOCATION",
+        "text": "ፒያሳ, ቴዎድሮስ አደባባይ",
+        "start": 55,
+        "end": 76
+      },
+      { "entity": "CONTACT", "text": "0999001122", "start": 83, "end": 93 }
+    ]
+  },
+  {
+    "message_id": 55,
+    "combined_content_for_ner": "KitchenAid Stand Mixer። 5-quart. ዋጋ: 28,000 ብር። አድራሻ: መገናኛ, ላፍቶ ሞል። ስልክ: 0910203040.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "KitchenAid Stand Mixer",
+        "start": 0,
+        "end": 22
+      },
+      { "entity": "BRAND", "text": "KitchenAid", "start": 0, "end": 10 },
+      { "entity": "SIZE", "text": "5-quart", "start": 25, "end": 32 },
+      { "entity": "PRICE", "text": "28,000 ብር", "start": 39, "end": 49 },
+      { "entity": "LOCATION", "text": "መገናኛ, ላፍቶ ሞል", "start": 58, "end": 74 },
+      { "entity": "CONTACT", "text": "0910203040", "start": 81, "end": 91 }
+    ]
+  },
+  {
+    "message_id": 56,
+    "combined_content_for_ner": "Reebok Classic Leather ጫማ። ሳይዝ: 42.5. ዋጋ: 3100 ብር። አድራሻ: ቦሌ, መድሀኒያለም ሞል። ስልክ: 0920304050.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Reebok Classic Leather ጫማ",
+        "start": 0,
+        "end": 26
+      },
+      { "entity": "BRAND", "text": "Reebok", "start": 0, "end": 6 },
+      { "entity": "SIZE", "text": "42.5", "start": 35, "end": 39 },
+      { "entity": "PRICE", "text": "3100 ብር", "start": 46, "end": 54 },
+      {
+        "entity": "LOCATION",
+        "text": "ቦሌ, መድሀኒያለም ሞል",
+        "start": 63,
+        "end": 82
+      },
+      { "entity": "CONTACT", "text": "0920304050", "start": 89, "end": 99 }
+    ]
+  },
+  {
+    "message_id": 57,
+    "combined_content_for_ner": "Patagonia ሹራብ። ሳይዝ: M. ዋጋ: 3200 ብር። አድራሻ: ገርጂ, ኢምፔሪያል ሆቴል አጠገብ። ስልክ: 0930405060.",
+    "annotations": [
+      { "entity": "PRODUCT", "text": "Patagonia ሹራብ", "start": 0, "end": 15 },
+      { "entity": "BRAND", "text": "Patagonia", "start": 0, "end": 9 },
+      { "entity": "SIZE", "text": "M", "start": 24, "end": 25 },
+      { "entity": "PRICE", "text": "3200 ብር", "start": 32, "end": 40 },
+      {
+        "entity": "LOCATION",
+        "text": "ገርጂ, ኢምፔሪያል ሆቴል አጠገብ",
+        "start": 49,
+        "end": 77
+      },
+      { "entity": "CONTACT", "text": "0930405060", "start": 84, "end": 94 }
+    ]
+  },
+  {
+    "message_id": 58,
+    "combined_content_for_ner": "Microsoft Xbox Series X። 1TB SSD. ዋጋ: 48,000 ብር። አድራሻ: 22, ጋለሪያ ህንፃ። ስልክ: 0940506070.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Microsoft Xbox Series X",
+        "start": 0,
+        "end": 23
+      },
+      { "entity": "BRAND", "text": "Microsoft", "start": 0, "end": 9 },
+      { "entity": "SIZE", "text": "1TB SSD", "start": 26, "end": 33 },
+      { "entity": "PRICE", "text": "48,000 ብር", "start": 40, "end": 50 },
+      { "entity": "LOCATION", "text": "22, ጋለሪያ ህንፃ", "start": 59, "end": 73 },
+      { "entity": "CONTACT", "text": "0940506070", "start": 80, "end": 90 }
+    ]
+  },
+  {
+    "message_id": 59,
+    "combined_content_for_ner": "Oakley የጸሀይ መነጽር። Holbrook model. ዋጋ: 2800 ብር። አድራሻ: ፒያሳ, አዳምስ ፓቪሊዮን። ስልክ: 0950607080.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "Oakley የጸሀይ መነጽር",
+        "start": 0,
+        "end": 19
+      },
+      { "entity": "BRAND", "text": "Oakley", "start": 0, "end": 6 },
+      { "entity": "SIZE", "text": "Holbrook model", "start": 22, "end": 36 },
+      { "entity": "PRICE", "text": "2800 ብር", "start": 43, "end": 51 },
+      {
+        "entity": "LOCATION",
+        "text": "ፒያሳ, አዳምስ ፓቪሊዮን",
+        "start": 60,
+        "end": 81
+      },
+      { "entity": "CONTACT", "text": "0950607080", "start": 88, "end": 98 }
+    ]
+  },
+  {
+    "message_id": 60,
+    "combined_content_for_ner": "ASICS Gel-Kayano 28 ጫማ። ሳይዝ: 44. ዋጋ: 3500 ብር። አድራሻ: መገናኛ, ሸዋ ዳቦ አጠገብ። ስልክ: 0960708090.",
+    "annotations": [
+      {
+        "entity": "PRODUCT",
+        "text": "ASICS Gel-Kayano 28 ጫማ",
+        "start": 0,
+        "end": 24
+      },
+      { "entity": "BRAND", "text": "ASICS", "start": 0, "end": 5 },
+      { "entity": "SIZE", "text": "44", "start": 32, "end": 34 },
+      { "entity": "PRICE", "text": "3500 ብር", "start": 41, "end": 49 },
+      {
+        "entity": "LOCATION",
+        "text": "መገናኛ, ሸዋ ዳቦ አጠገብ",
+        "start": 58,
+        "end": 80
+      },
+      { "entity": "CONTACT", "text": "0960708090", "start": 87, "end": 97 }
+    ]
+  }
+]
